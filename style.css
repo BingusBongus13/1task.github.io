@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #222222;
+    background-color: #f2f4f7;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+#site-header {
+    width: 100%;
+    background-color: #6f9dcc;
+    border-bottom: 3px solid #456f9c;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 960px;
+    min-height: 150px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 105px;
+    color: #1f4168;
+    background-color: #b8d0ea;
+    border: 3px solid #456f9c;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #ffffff;
+    background-color: #456f9c;
+}
+
+.site-title h1 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.site-title p {
+    margin: 0;
+    color: #e8f1fb;
+    font-size: 16px;
+}
+
+.main-menu ul {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-menu a {
+    display: block;
+    padding: 10px 14px;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+    background-color: #456f9c;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.content-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #c4d0dc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.content-section h2 {
+    margin-top: 0;
+    color: #315d89;
+    border-bottom: 2px solid #6f9dcc;
+    font-size: 25px;
+}
+
+.link-list {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.link-list li {
+    margin-bottom: 8px;
+}
+
+.link-list a {
+    color: #245d99;
+}
+
+.link-list a:hover {
+    color: #b64040;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+caption {
+    margin-bottom: 10px;
+    color: #315d89;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #6d8eae;
+    text-align: center;
+}
+
+th {
+    color: #ffffff;
+    background-color: #4d7eae;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eaf2f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #d2e4f5;
+}
+
+form {
+    max-width: 650px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+    color: #315d89;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9aabba;
+    border-radius: 4px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #6f9dcc;
+    border-color: #315d89;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 11px 24px;
+    color: #ffffff;
+    background-color: #4d7eae;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font: inherit;
+}
+
+button:hover,
+button:focus {
+    background-color: #315d89;
+}
+
+#site-footer {
+    width: 100%;
+    color: #ffffff;
+    background-color: #6f9dcc;
+    border-top: 3px solid #456f9c;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 22px 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+@media (max-width: 760px) {
+    .header-content {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .main-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .site-title h1 {
+        font-size: 24px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .page-content {
+        padding: 15px 10px;
+    }
+
+    .content-section {
+        padding: 16px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
